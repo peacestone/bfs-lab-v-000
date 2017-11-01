@@ -14,7 +14,7 @@ function findAdjacent(node, vertices, edges) {
       }
     }
   }
-  return vertices.filter((vertice) => adjacentNodeName.includes(vertice.name) && !vertice.distance)
+  return vertices.filter((vertice) => adjacentNodeName.includes(vertice.name) && vertice.distance === null)
 }
 
 function markDistanceAndPredecessor() {
