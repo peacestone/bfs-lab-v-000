@@ -17,6 +17,9 @@ function findAdjacent(node, vertices, edges) {
   return vertices.filter((vertice) => adjacentNodeName.includes(vertice.name) && vertice.distance === null)
 }
 
-function markDistanceAndPredecessor() {
-
+function markDistanceAndPredecessor(predecessor, adjacentNodes) {
+  for (let i = 0; adjacentNodes.length > i; i++;) {
+    adjacentNodes[i].predecessor = predecessor
+    adjacentNodes[i].distance = predecessor.distance + 1
+  }
 }
