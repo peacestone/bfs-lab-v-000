@@ -14,6 +14,9 @@ function findAdjacent(node, vertices, edges) {
       }
     }
   }
-  console.log(adjacentNodeName)
-  return vertices.filter((vertice) => adjacentNodeName.includes(vertice.name) && vertice.distance === null)
+  return vertices.filter((vertice) => adjacentNodeName.includes(vertice.name) && !vertice.distance)
+}
+
+function markDistanceAndPredecessor() {
+
 }
